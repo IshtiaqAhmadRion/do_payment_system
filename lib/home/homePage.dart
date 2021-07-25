@@ -30,8 +30,7 @@ class _HomePageState extends State<HomePage> {
                 DropdownButton(
                     value: data.items[0],
                     onChanged: (newValue) {
-                      data.selectedItem = newValue.toString();
-                     
+                      data.setSelectedItem(newValue.toString());
                     },
                     items: data.items
                         .map<DropdownMenuItem<String>>((String value) {
