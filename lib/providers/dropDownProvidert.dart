@@ -5,10 +5,10 @@ class DropDownProvider extends ChangeNotifier {
   String selectedItem ='';
 
   List<String> get items => _items;
-  // String get selectd => selectedItem;
+  String get selectd => selectedItem;
 
-  // void setSelectedItem(String s) {
-  //   selectedItem = s;
-  //   notifyListeners();
-  // }
+  void setSelectedItem(String s) {
+    selectedItem = s;
+    notifyListeners();
+  }
 }
