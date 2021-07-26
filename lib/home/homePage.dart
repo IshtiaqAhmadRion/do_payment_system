@@ -28,15 +28,19 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 DropdownButton(
+                 
+
                     value: data.items[0],
                     onChanged: (newValue) {
-                      data.setSelectedItem(newValue.toString());
+                      data.selectedItem = newValue.toString();
+                      
                     },
                     items: data.items
                         .map<DropdownMenuItem<String>>((String value) {
                       return DropdownMenuItem<String>(
                         value: value,
-                        child: Text(value),
+                        child: Text(value,),
+                        
                       );
                     }).toList())
               ],
