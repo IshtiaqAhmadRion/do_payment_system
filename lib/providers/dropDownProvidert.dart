@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 
 class DropDownProvider extends ChangeNotifier {
   List<String> _items = ['20 GP', '40 HC'];
-  late String selectedItem;
+  String selectedItem = '';
   
 
   List<String> get items => _items;
