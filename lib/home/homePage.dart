@@ -1,6 +1,4 @@
-import 'package:do_payment_system/providers/dropDownProvidert.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -12,7 +10,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    final data = Provider.of<DropDownProvider>(context);
+    // final data = Provider.of<DropDownProvider>(context);
     final screenSize = MediaQuery.of(context).size.width / 2;
     return Scaffold(
       appBar: AppBar(
@@ -27,22 +25,25 @@ class _HomePageState extends State<HomePage> {
             //for 20 fit
             child: Column(
               children: [
-                DropdownButton<String>(
-                    value: data.items[0],
-                    onChanged: (newValue) {
-                     data.setSelectedItem(newValue.toString());
+                // DropdownButton<String>(
+                //     value: data.items[0],
+                //     onChanged: (newValue) {
+                //      data.setSelectedItem(newValue.toString());
                       
-                    },
-                    items: data.items
-                        .map<DropdownMenuItem<String>>((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value,),
+                //     },
+                //     items: data.items
+                //         .map<DropdownMenuItem<String>>((String value) {
+                //       return DropdownMenuItem<String>(
+                //         value: value,
+                //         child: Text(value,),
                         
-                      );
-                    }).toList()
-                    ),
-                    
+                //       );
+                //     }).toList()
+                //     ),
+              TextField(
+                textAlign: TextAlign.center,
+                
+              )    
               ],
             ),
           ),
