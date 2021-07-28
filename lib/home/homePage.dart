@@ -27,12 +27,10 @@ class _HomePageState extends State<HomePage> {
             //for 20 fit
             child: Column(
               children: [
-                DropdownButton(
-                 
-
+                DropdownButton<String>(
                     value: data.items[0],
                     onChanged: (newValue) {
-                      data.selectedItem = newValue.toString();
+                     data.setSelectedItem(newValue.toString());
                       
                     },
                     items: data.items
@@ -42,7 +40,9 @@ class _HomePageState extends State<HomePage> {
                         child: Text(value,),
                         
                       );
-                    }).toList())
+                    }).toList()
+                    ),
+                    
               ],
             ),
           ),
